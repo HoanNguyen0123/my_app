@@ -5,6 +5,15 @@ class SessionsController < ApplicationController
   def new
   end
 
+  def new
+    unless User.exists?(email_address:'admin@123.com')
+      User.create!(email_address:'admin@123.com',
+      password:'123',
+      password_confirmation:'123')
+    end
+  end
+
+
   def create
     if user = User.authenticate_by(params.permit(:email_address, :password))
       start_new_session_for user
