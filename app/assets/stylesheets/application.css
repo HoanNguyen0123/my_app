@@ -589,9 +589,9 @@ body {
 
 /* Forgot Password Link */
 .forgot-password-link {
-  font-size: 14px;
+  font-size: 16px;
   color: #007bff;
-  text-decoration: none;
+  text-decoration:underline;
   text-align: center;
   display: block;
   margin-top: 20px;
@@ -739,3 +739,7 @@ body {
     padding: 12px;
   }
 }
+.sign-up-margin {
+  margin-left: 10px; /* Tùy chỉnh giá trị khoảng cách (10px) theo ý bạn */
+}
+
