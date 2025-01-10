@@ -1,0 +1,19 @@
+<h1><%= t ".title" %></h1>
+
+<%= link_to "New product", new_product_path, class: "button" if authenticated? %>
+
+
+<div id="products">
+  <% @products.each do |product| %>
+    <div class="product-item">
+      <%= link_to product_path(product) do %>
+        <div class="product-image">
+          <%= image_tag product.featured_image, alt: product.name, class: "product-img" if product.featured_image.attached? %>
+        </div>
+        <div class="product-name">
+          <%= product.name %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

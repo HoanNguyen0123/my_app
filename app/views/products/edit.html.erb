@@ -1,0 +1,13 @@
+<div class="edit-product-container">
+  <h1 class="page-title">Edit Product</h1>
+
+  <div class="form-container">
+    <%= render "form", product: @product %>
+  </div>
+
+  <div class="product-actions">
+  <%= link_to "Back products", product_path(@product), class: "button edit-button" %>
+  <%= button_to "Delete product", @product, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "button delete-button" %>
+</div>
+
+</div>
